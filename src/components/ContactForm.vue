@@ -1,13 +1,29 @@
 <template>
-    <v-form>
-        <v-container style="width: 100%">
+    <v-form v-model="valid" ref="form">
+        <v-container style="width: 100%; padding-bottom: 0px;">
             <v-text-field ref="field" v-model="name" label="Name" :rules="formRules.nameRules" required placeholder="Your Name"></v-text-field>
             <v-text-field v-model="email" label="Email" :rules="formRules.emailRules" required></v-text-field>
             <v-textarea placeholder="What do you want to discuss?" v-model="content" required
                 :rules="formRules.contentRules" auto-grow rows="1" label="Content"></v-textarea>
+            <v-btn :disabled="!isValid" :loading="sending" @click="send">Submit</v-btn>
         </v-container>
+        
     </v-form>
-    <v-btn :disabled="!isValid" @click="send">Submit</v-btn>
+    <v-snackbar
+      v-model="showError"
+      timeout="5000"
+    >
+      <p style="color:white">Something went wrong, please try again later</p>
+       <template v-slot:actions>
+        <v-btn
+          color="red"
+          variant="text"
+          @click="showError = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
 </template>
 
 <script lang="ts">
@@ -38,13 +54,24 @@ export default defineComponent({
         return true;
       },
       send () {
-       fetch("http://localhost:4000/newcontact", {
+        this.sending = true
+       fetch("https://apis.ericrice.dev/contact/newcontact", {
          method: "POST",
          body: JSON.stringify({
            Name: this.name,
            Email: this.email,
            Content: this.content,
          })
+       }).then((r: any) => {
+         this.name = "";
+         this.email = "";
+         this.content = "";
+         this.sending = false;
+          (this.$refs.form as HTMLFormElement).reset()
+       }).catch((err: any) => {
+          (this.$refs.form as HTMLFormElement).reset()
+          this.sending = false
+          this.showError = true
        })
         // if((this.$refs.form as any).validate()){
         //   alert('Form passed')
@@ -55,9 +82,10 @@ export default defineComponent({
     },
     computed: {
       isValid() {
-        if (this.name && this.email && this.content) {
-          return true
-        }
+        return this.valid
+        // if (this.name && this.email && this.content) {
+        //   return true
+        // }
       }
     },  
     data: () => ({
@@ -65,6 +93,8 @@ export default defineComponent({
         email: "",
         content: "",
         valid: false,
+        sending: false,
+        showError: false,
         formRules: {
             nameRules: [
                 (v: string) => !!v || 'Name is required',

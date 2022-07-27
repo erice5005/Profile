@@ -2,7 +2,7 @@
     <!-- <div>
         
     </div> -->
-    <v-container>
+    <v-container style="display:none">
         <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up">
             <v-list nav dense>
                 <v-list-item-group @click.stop="toggleDrawer">

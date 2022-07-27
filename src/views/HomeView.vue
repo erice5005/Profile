@@ -24,8 +24,8 @@
           technical roadmaps.</p>
         <br />
         <h4>Offerings</h4>
-        <v-list>
-          <v-list-item lines="three">
+        <v-list style="background: transparent">
+          <v-list-item lines="two">
             <v-list-item-avatar start>
               <v-icon icon="mdi-code-tags"></v-icon>
             </v-list-item-avatar>
@@ -84,7 +84,7 @@
         </div>
       </v-col>
     </v-row>
-    <v-spacer style="height:25px"></v-spacer>
+    <v-spacer style="height:15px"></v-spacer>
     <v-row>
       <v-col cols="auto" class="flex-grow-1 flex-shrink-0">
         <p style="font-weight: bold;">Got an idea you want to discuss? Lets talk!</p>
@@ -136,10 +136,15 @@
 <script lang="ts">
 import contactform from '../components/ContactForm.vue'
 import { defineComponent } from "vue"
+import { useMeta } from 'vue-meta'
+
 export default defineComponent({
   components: {
     contactform,
 
+  },
+  setup () {
+    useMeta({ title: 'Home' })
   },
   data: () => ({
     timeline: [

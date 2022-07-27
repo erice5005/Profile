@@ -1,4 +1,7 @@
 <template>
+  <metainfo>
+    <template v-slot:title="{ content }">{{ content ? `${content} | Eric Rice Dev` : `SITE_NAME` }}</template>
+  </metainfo>
   <v-app full-height class="mainapp">
     <!-- <v-content> -->
       <v-container align-center style="height:100%">
@@ -13,9 +16,16 @@
 <script lang="ts">
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import { useMeta } from 'vue-meta'
+
 export default {
   name: 'App',
-
+  setup() {
+    useMeta({
+      title: 'Eric Rice Dev',
+      htmlAttrs: { lang: 'en', amp: true }
+    })
+  },
   components: {
     Header,
     Footer

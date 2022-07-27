@@ -18,6 +18,7 @@
     "roboto-fontface": "*",
     "vee-validate": "^4.6.2",
     "vue": "^3.2.31",
+    "vue-meta": "^3.0.0-alpha.10",
     "vue-router": "^4.0.12",
     "vuetify": "^3.0.0-alpha.0",
     "webfontloader": "^1.0.0"
