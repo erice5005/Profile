@@ -35,7 +35,7 @@ export default defineComponent({
     setup() {
         const form = ref<ComponentPublicInstance<HTMLFormElement>>();
         onMounted(()=> {
-            console.log(form)
+            // console.log(form)
         })
         return {
             form

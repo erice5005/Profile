@@ -117,13 +117,13 @@
         </p>
         <v-row>
           <v-col align="center">
-              <img src="../assets/unflogo.png" />
+              <v-img :src="unfLogo" :alt="'United Nations Foundation'" height="200" width="200"/>
           </v-col>
           <v-col  align="center">
-            <img src="../assets/techstars.png" />
+            <v-img :src="techstarsLogo" :alt="'Techstars'" height="200" width="200"/>
           </v-col>
           <v-col  align="center">
-            <img src="../assets/forbes.png" />
+            <v-img :src="forbesLogo" :alt="'Forbes 30 Under 30'" height="200" width="200"/>
           </v-col>
         </v-row>
       </v-col>
@@ -146,7 +146,16 @@ export default defineComponent({
   setup () {
     useMeta({ title: 'Home' })
   },
+  mounted() {
+    this.unfLogo = new URL("../assets/unflogo.png", import.meta.url).href
+    this.techstarsLogo = new URL("../assets/techstars.png", import.meta.url).href
+    this.forbesLogo = new URL("../assets/forbes.png", import.meta.url).href
+
+  },
   data: () => ({
+    unfLogo: "",
+    techstarsLogo: "",
+    forbesLogo: "",
     timeline: [
       {
         title: "Open to new projects",
@@ -220,7 +229,7 @@ export default defineComponent({
 }
 
 
-.logocol img {
+.logocol .v-img {
   height: 200px;
   width: 200px;
   align-content: center;
