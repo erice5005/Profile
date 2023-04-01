@@ -8,7 +8,7 @@
           Eric Rice
         </h2>
         <h3>
-          Technology Consultant
+          Fractional CTO | Technology Consultant
         </h3>
       </v-col>
     </v-row>
@@ -23,15 +23,15 @@
         <p>I've created startups, grown teams, scaled infrastructure, created custom automation solutions and advised
           technical roadmaps.</p>
         <br />
-        <h4>Offerings</h4>
+        <h4>Core Skills</h4>
         <v-list style="background: transparent">
           <v-list-item lines="two">
             <v-list-item-avatar start>
               <v-icon icon="mdi-code-tags"></v-icon>
             </v-list-item-avatar>
             <v-list-item-header>
-              <v-list-item-title>Software Development</v-list-item-title>
-              <v-list-item-subtitle>Let's make something! Software development exactly as you need it.
+              <v-list-item-title>Scalable Solutions</v-list-item-title>
+              <v-list-item-subtitle>As a software developer, I have built highly scalable infrastructure capable of supporting hundreds of thousands of concurrent requests. I can offer valuable expertise in designing and implementing scalable solutions that can help businesses grow and expand.
               </v-list-item-subtitle>
             </v-list-item-header>
 
@@ -41,9 +41,9 @@
               <v-icon icon="mdi-code-tags"></v-icon>
             </v-list-item-avatar>
             <v-list-item-header>
-              <v-list-item-title>Process Automation</v-list-item-title>
-              <v-list-item-subtitle>Make the computer do the work. Take a business process and speed it up through
-                custom processing tools.</v-list-item-subtitle>
+              <v-list-item-title>Team Leadership</v-list-item-title>
+              <v-list-item-subtitle>My experience as a co-founder and CTO, as well as my role as VP of Engineering and Data, demonstrate my ability to lead and manage development teams. As a fractional CTO, I can provide strategic leadership and guidance to ensure that technology initiatives align with business goals and objectives.
+            </v-list-item-subtitle>
             </v-list-item-header>
           </v-list-item>
           <v-list-item lines="two">
@@ -51,8 +51,8 @@
               <v-icon icon="mdi-code-tags"></v-icon>
             </v-list-item-avatar>
             <v-list-item-header>
-              <v-list-item-title>Technical Advising</v-list-item-title>
-              <v-list-item-subtitle>The technical world can get complicated, I can help you navigate.
+              <v-list-item-title>Rapid Prototype Development</v-list-item-title>
+              <v-list-item-subtitle> With my experience in rapid prototyping, I can help businesses quickly iterate on product ideas and test new concepts in a cost-effective manner. This can help companies stay ahead of the competition and deliver innovative solutions that meet the needs of their customers.
               </v-list-item-subtitle>
             </v-list-item-header>
           </v-list-item>
@@ -61,12 +61,47 @@
               <v-icon icon="mdi-code-tags"></v-icon>
             </v-list-item-avatar>
             <v-list-item-header>
-              <v-list-item-title>Custom Contract</v-list-item-title>
-              <v-list-item-subtitle>D. None of the above. Not everything fits in a box. Let's chat.
+              <v-list-item-title>Diverse Technical Expertise</v-list-item-title>
+              <v-list-item-subtitle>With proficiency in a variety of programming languages and frameworks, I can offer valuable expertise in a range of technical areas. This can help businesses stay up-to-date with the latest technologies and leverage the best tools and frameworks for their specific needs.
+              </v-list-item-subtitle>
+            </v-list-item-header>
+          </v-list-item>
+          <v-list-item lines="two">
+            <v-list-item-avatar start>
+              <v-icon icon="mdi-code-tags"></v-icon>
+            </v-list-item-avatar>
+            <v-list-item-header>
+              <v-list-item-title>Process Automation and DevOps</v-list-item-title>
+              <v-list-item-subtitle> My experience with DevOps, Docker, Kubernetes, and CI/CD can help businesses streamline their development and deployment processes, reduce downtime, and improve overall efficiency. I can also offer expertise in dynamic automation, which can help companies automate routine tasks and free up developers' time for more complex projects.
               </v-list-item-subtitle>
             </v-list-item-header>
           </v-list-item>
         </v-list>
+      </v-col>
+    </v-row>
+    <v-spacer style="height:15px"></v-spacer>
+    <v-row>
+      <v-col cols="auto"  class="logocol" justify="self-end">
+        <p class="d-flex justify-center">
+        <h3>Past Work</h3>
+        </p>
+
+        <v-row v-for="(chunk, chunkInd) in rowChunks" :key="chunkInd">
+          <v-col v-for="(workImg, imgInd) in chunk" :key="imgInd + `image`" align="center">
+              <v-img :src="workImg.image" :title="workImg.title" height="200" width="200"/>
+          </v-col>
+
+        <!-- <v-row>
+          <v-col align="center">
+              <v-img :src="unfLogo" :alt="'United Nations Foundation'" height="200" width="200"/>
+          </v-col>
+          <v-col  align="center">
+            <v-img :src="techstarsLogo" :alt="'Techstars'" height="200" width="200"/>
+          </v-col>
+          <v-col  align="center">
+            <v-img :src="forbesLogo" :alt="'Forbes 30 Under 30'" height="200" width="200"/>
+          </v-col> -->
+        </v-row>
       </v-col>
       <v-col>
         <p class="d-flex justify-center">
@@ -84,7 +119,6 @@
         </div>
       </v-col>
     </v-row>
-    <v-spacer style="height:15px"></v-spacer>
     <v-row>
       <v-col cols="auto" class="flex-grow-1 flex-shrink-0">
         <p style="font-weight: bold;">Got an idea you want to discuss? Lets talk!</p>
@@ -111,22 +145,6 @@
 
       </v-col>
        <!-- <v-spacer></v-spacer> -->
-      <v-col cols="auto"  class="logocol" justify="self-end">
-        <p class="d-flex justify-center">
-        <h3>Past Work</h3>
-        </p>
-        <v-row>
-          <v-col align="center">
-              <v-img :src="unfLogo" :alt="'United Nations Foundation'" height="200" width="200"/>
-          </v-col>
-          <v-col  align="center">
-            <v-img :src="techstarsLogo" :alt="'Techstars'" height="200" width="200"/>
-          </v-col>
-          <v-col  align="center">
-            <v-img :src="forbesLogo" :alt="'Forbes 30 Under 30'" height="200" width="200"/>
-          </v-col>
-        </v-row>
-      </v-col>
     </v-row>
     <v-row>
 
@@ -134,74 +152,158 @@
   </v-container>
 </template>
 <script lang="ts">
-import contactform from '../components/ContactForm.vue'
-import { defineComponent } from "vue"
-import { useMeta } from 'vue-meta'
+import contactform from "../components/ContactForm.vue";
+import { defineComponent } from "vue";
+import { useMeta } from "vue-meta";
 
 export default defineComponent({
   components: {
     contactform,
-
   },
-  setup () {
-    useMeta({ title: 'Home' })
+  setup() {
+    useMeta({ title: "Home",
+      // meta: [
+      //    {
+      //     name: "robots", content : "index, nofollow"
+      //    },
+      //    {
+      //     name: "keywords", title: "keywords", content: "cto, fractional cto, consulting, technical advisor, startup technical advisor, technical board member"
+      //    }
+      // ]
+    });
+  },
+  computed: {
+    rowChunks() {
+      var rowBlocks = [];
+      var totalCount = this.pastWork.length;
+      // var blocks = totalCount/this.imagesPerRow;
+      for (let i = 0; i < totalCount; i += this.imagesPerRow) {
+        const chunk = this.pastWork.slice(i, i + this.imagesPerRow);
+        rowBlocks.push(chunk);
+      }
+      return rowBlocks;
+    },
   },
   mounted() {
-    this.unfLogo = new URL("../assets/unflogo.png", import.meta.url).href
-    this.techstarsLogo = new URL("../assets/techstars.png", import.meta.url).href
-    this.forbesLogo = new URL("../assets/forbes.png", import.meta.url).href
-
+    this.unfLogo = new URL("../assets/unflogo.png", import.meta.url).href;
+    this.techstarsLogo = new URL(
+      "../assets/techstars.png",
+      import.meta.url
+    ).href;
+    this.forbesLogo = new URL("../assets/forbes.png", import.meta.url).href;
+    this.gurulogo = new URL("../assets/gurulogo.jpg", import.meta.url).href;
+    this.kastlogo = new URL("../assets/kastlogo.png", import.meta.url).href;
+    this.gofamerlogo = new URL(
+      "../assets/gofamerlogo.jpg",
+      import.meta.url
+    ).href;
+    this.neverthinklogo = new URL(
+      "../assets/neverthinklogo.png",
+      import.meta.url
+    ).href;
+    this.powerspikelogo = new URL(
+      "../assets/powerspikelogo",
+      import.meta.url
+    ).href;
   },
-  data: () => ({
-    unfLogo: "",
-    techstarsLogo: "",
-    forbesLogo: "",
-    timeline: [
-      {
-        title: "Open to new projects",
-        start: "July 2022",
-        end: "now"
-      },
-      {
-        title: "Pro-bono consulting for United Nations Foundation",
-        start: "September 2021",
-        end: "March 2022",
-      },
-      {
-        title: "CTO and Co-Founder of Powerspike",
-        start: "November 2016",
-        end: "July 2022",
-      },
-      {
-        title: "BS in Computer Engineering from Binghamton University",
-        start: "August 2014",
-        end: "May 2018"
-      }
-
-    ],
-    form: {
-      name: "",
-      email: "",
-      content: "",
-      valid: false,
-    },
-    formRules: {
-      nameRules: [
-        (v: any) => !!v || 'Name is required',
-        // (v:any) => {console.log(v); return true}
-        // (v:any) => (v && v.length <= 10) || 'Name must be less than 10 characters',
+  data: () => {
+    return {
+      unfLogo: "",
+      techstarsLogo: "",
+      forbesLogo: "",
+      gurulogo: "",
+      kastlogo: "",
+      gofamerlogo: "",
+      neverthinklogo: "",
+      powerspikelogo: "",
+      timeline: [
+        {
+          title: "Open to new projects",
+          start: "July 2022",
+          end: "now",
+        },
+        {
+          title: "VP of Engineering and Data at Live Current Media",
+          start: "September 2022",
+          end: "now",
+        },
+        {
+          title: "Powerspike Acquired by Live Current Media",
+          start: "September 2022",
+          end: "September 2022",
+        },
+        {
+          title: "Pro-bono consulting for United Nations Foundation",
+          start: "September 2021",
+          end: "March 2022",
+        },
+        {
+          title: "CTO and Co-Founder of Powerspike",
+          start: "November 2016",
+          end: "July 2022",
+        },
+        {
+          title: "BS in Computer Engineering from Binghamton University",
+          start: "August 2014",
+          end: "May 2018",
+        },
       ],
-      emailRules: [
-        (v: any) => !!v || 'Email is required',
-        (v: any) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+      imagesPerRow: 3,
+      pastWork: [
+        {
+          image: new URL("../assets/forbes.png", import.meta.url).href,
+          title: "Forbes 30 Under 30 Class of 2021",
+        },
+        {
+          image: new URL("../assets/unflogo.png", import.meta.url).href,
+          title: "United Nations Foundation",
+        },
+        {
+          image: new URL("../assets/techstars.png", import.meta.url).href,
+          title: "Techstars Atlanta Class of 2018",
+        },
+        {
+          image: new URL("../assets/powerspikelogo.jpg", import.meta.url).href,
+          title: "Powerspike",
+        },
+        {
+          image: new URL("../assets/kastlogo.png", import.meta.url).href,
+          title: "Kast",
+        },
+        {
+          image: new URL("../assets/neverthinklogo.png", import.meta.url).href,
+          title: "Neverthink",
+        },
+        {
+          image: new URL("../assets/gurulogo.jpg", import.meta.url).href,
+          title: "Guru Experience",
+        },
+        {
+          image: new URL("../assets/gofamerlogo.jpg", import.meta.url).href,
+          title: "GoFamer",
+        },
       ],
-      contentRules: [
-        (v: any) => !!v || 'Content is required',
-      ]
-    }
-  }),
-
-})
+      form: {
+        name: "",
+        email: "",
+        content: "",
+        valid: false,
+      },
+      formRules: {
+        nameRules: [
+          (v: any) => !!v || "Name is required",
+          // (v:any) => {console.log(v); return true}
+          // (v:any) => (v && v.length <= 10) || 'Name must be less than 10 characters',
+        ],
+        emailRules: [
+          (v: any) => !!v || "Email is required",
+          (v: any) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+        ],
+        contentRules: [(v: any) => !!v || "Content is required"],
+      },
+    };
+  },
+});
 </script>
 <style scoped>
 .avatarImage {
@@ -218,16 +320,15 @@ export default defineComponent({
 }
 
 .mainbackground::before {
-  background-image: url('@/assets/codebackgroundminimal.png');
+  background-image: url("@/assets/codebackgroundminimal.png");
   /* background-size: contain; */
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: .4;
+  opacity: 0.4;
   z-index: -1;
   content: "";
 }
-
 
 .logocol .v-img {
   height: 200px;
