@@ -1,6 +1,6 @@
 <template>
   <metainfo>
-    <template v-slot:title="{ content }">{{ content ? `${content} | Eric Rice Dev` : `SITE_NAME` }}</template>
+    <template v-slot:title="{ content }">{{ content ? `${content} | Rice Dev Solutions` : `Rice Dev Solutions` }}</template>
   </metainfo>
   <v-app full-height class="mainapp">
     <!-- <v-content> -->
@@ -22,7 +22,7 @@ export default {
   name: 'App',
   setup() {
     useMeta({
-      title: 'Eric Rice Dev',
+      title: 'Rice Dev Solutions',
       htmlAttrs: { lang: 'en', amp: true }
     })
   },

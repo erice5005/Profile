@@ -2,13 +2,13 @@
 
 <template>
   <v-container style="max-width: 90%">
-    <v-row style="border-bottom: 2px solid darkgray">
+    <v-row style="border-bottom: 2px solid darkgray; text-align: center">
       <v-col>
         <h2>
           Eric Rice
         </h2>
         <h3>
-          Fractional CTO | Technology Consultant
+          Prototype Engineer | Fractional CTO | Technology Consultant
         </h3>
       </v-col>
     </v-row>
@@ -23,7 +23,7 @@
         <p>I've created startups, grown teams, scaled infrastructure, created custom automation solutions and advised
           technical roadmaps.</p>
         <br />
-        <h4>Core Skills</h4>
+        <h4>Focus Areas</h4>
         <v-list style="background: transparent">
           <v-list-item lines="two">
             <v-list-item-avatar start>
@@ -88,7 +88,7 @@
 
         <v-row v-for="(chunk, chunkInd) in rowChunks" :key="chunkInd">
           <v-col v-for="(workImg, imgInd) in chunk" :key="imgInd + `image`" align="center">
-              <v-img :src="workImg.image" :title="workImg.title" height="200" width="200"/>
+              <v-img :src="workImg.image" :title="workImg.title" height="200" width="200" :alt="workImg.title"/>
           </v-col>
 
         <!-- <v-row>
@@ -161,7 +161,7 @@ export default defineComponent({
     contactform,
   },
   setup() {
-    useMeta({ title: "Home",
+    useMeta({ title: "",
       // meta: [
       //    {
       //     name: "robots", content : "index, nofollow"

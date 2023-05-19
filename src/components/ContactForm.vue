@@ -4,7 +4,7 @@
             <v-text-field ref="field" v-model="name" label="Name" :rules="formRules.nameRules" required placeholder="Your Name"></v-text-field>
             <v-text-field v-model="email" label="Email" :rules="formRules.emailRules" required></v-text-field>
             <v-textarea placeholder="What do you want to discuss?" v-model="content" required
-                :rules="formRules.contentRules" auto-grow rows="1" label="Content"></v-textarea>
+                :rules="formRules.contentRules" auto-grow rows="1" label="Message"></v-textarea>
             <v-btn :disabled="!isValid" :loading="sending" @click="send">Submit</v-btn>
         </v-container>
         

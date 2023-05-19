@@ -6,6 +6,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "dev": "vite",
     "preview": "vite preview --port 5050",
+    "sitemap": "vue-cli-service sitemap",
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
@@ -40,6 +41,7 @@
     "sass-loader": "^10.0.0",
     "typescript": "~4.5.5",
     "vite": "^2.8.4",
+    "vue-cli-plugin-sitemap": "~2.3.0",
     "vue-cli-plugin-vuetify": "~2.4.5",
     "vue-tsc": "^0.31.4",
     "vuetify-loader": "^2.0.0-alpha.0"
